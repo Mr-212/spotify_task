@@ -27,10 +27,10 @@
 
 #instructions
 - RUn composer install.
-- Run project via php artisan serve which default to localhost:8000.
+- Run project via php artisan serve which defaults to localhost:8000.
 - Run php artisan migrate.
 - Get spotify client and secret from spotify dashboard by creating app, and update callback url to https://localhost:8000/spotify_callback.
 - update the DB AND Spotify creds in .env file and run php artisan optimize:clear .
 - Accessing localhost:8000 in url sholud leads to onboarding process, if everything installed correctly.
-- Enjou :)
+- Enjoy :)
 
