@@ -14,7 +14,10 @@ class CountryLocationService
 
     public function countries($country)
     {
-        $response =  Http::get($this->countryUrl. "/name/" . $country);
+        $response =  Http::get($this->countryUrl. '/name/' . $country);
+
+
+
 
 
         if($response->successful())
@@ -24,6 +27,8 @@ class CountryLocationService
                 return data_get($value, 'name.common');
             }, $response->json());
         }
+
+        Log::error(json_encode($response->json()));
 
         return [];
 
@@ -58,6 +63,8 @@ class CountryLocationService
                 return data_get($value, 'display_name');
             }, $response->json());
         }
+
+        Log::info(json_encode($response->json()));
 
         return ["An error occured: " . data_get($response->json(), 'error')];
 
