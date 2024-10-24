@@ -9,6 +9,8 @@ class CountryLocationService
 
     private $addressUrl = 'https://nominatim.openstreetmap.org/search';
 
+    private $locationIQ = 'https://us1.locationiq.com/v1/search.php';
+
 
     public function countries($country)
     {
@@ -30,16 +32,24 @@ class CountryLocationService
 
     public function address($address)
     {
-        $response =  Http::get($this->addressUrl, [
+        // $response =  Http::get($this->addressUrl, [
 
-                'q' => $address,
-                'format' => 'json',
-                'addressdetails' => 4,
-                'limit' => 5
+        //         'q' => $address,
+        //         'format' => 'json',
+        //         'addressdetails' => 4,
+        //         'limit' => 5
 
+        // ]);
+
+        $response = Http::get($this->locationIQ, [
+            // 'key' => 'pk.27883334841abc386c762fd717c6908f',
+            'key' => env('LOCATION_IQ'),
+            'q' => $address,
+            'format' => 'json'
         ]);
 
-        // dd($response->body());
+        // dd($response->json());
+        // dd(data_get($response->json(), 'error'));
 
         if($response->successful())
         {
@@ -49,7 +59,7 @@ class CountryLocationService
             }, $response->json());
         }
 
-        return [];
+        return ["An error occured: " . data_get($response->json(), 'error')];
 
     }
 }
