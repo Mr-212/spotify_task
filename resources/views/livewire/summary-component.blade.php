@@ -15,7 +15,7 @@
         </div>
         <div class="">
             <label>How did you find US?</label>
-            <h6>{{ $onboarding?->address }}</h6>
+            <h6>{{ $onboarding?->hear_about_us }}</h6>
         </div>
         <div class="">
             <label>Artist Name?</label>
