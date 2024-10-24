@@ -2,7 +2,7 @@
 
     <div class="row">
         <h4 class="text-white">Where are you located ?</h4>
-        <p class="text-white text-small">Adresses are being fecthed from API (https://nominatim.openstreetmap.org/search) beacuse of requesting from localhost or location it sometimes blocks otherwise works and tested<p>
+        <p class="text-white text-small">Adresses are being fecthed from API (https://nominatim.openstreetmap.org/search) beacuse of requesting from localhost or location it sometimes blocks otherwise works and tested. Now updated with LocationIQ API<p>
 
         <div>
             <input type="text"  class="form-control form-control-sm" placeholder="Search Country"  wire:model.live='countrySearchTerms' />

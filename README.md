@@ -2,7 +2,9 @@
 - This is 8-9 step test task followed by task descriptin and visuals by figama design.
 - Onboarding and spotify artist tables is created.
 - Data is being saved in tables and summary can be viewd at the end.
-- on adress page both country and adreess are being fetched from free open API's(sometimes the adress API took time and cause delayed response further checking it appeared that adreess API(https://nominatim.openstreetmap.org/search) caused blocked address perhaps due to location).
+- On adress page both country and adreess are being fetched from free open API's(sometimes the adress API took time and cause delayed response further      checking it appeared that adreess API(https://nominatim.openstreetmap.org/search) caused blocked address perhaps due to location).
+update: Updated location API url with locationIQ API.
+
 - Artist can be fetched by name or artist URL.
 - Spotify authentication and adress API's are being handled by service classes at namespace App\Services;
 
@@ -26,7 +28,7 @@
 - Any feedback would be appreciated :).
 
 #instructions
-- RUn composer install.
+- Run composer install.
 - Run project via php artisan serve which defaults to localhost:8000.
 - Run php artisan migrate.
 - Get spotify client and secret from spotify dashboard by creating app, and update callback url to https://localhost:8000/spotify_callback.
