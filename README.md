@@ -1,3 +1,10 @@
+#By: ALi Raza
+#contact:
+#raza.10@gmail.com
+#raza_997@hotmail.com
+
+
+
 #Spotify Task
 - This is 8-9 step test task followed by task descriptin and visuals by figama design.
 - Onboarding and spotify artist tables is created.
